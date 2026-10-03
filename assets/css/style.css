@@ -14,7 +14,6 @@ body {
   font-family:
     Georgia,
     "Times New Roman",
-    Times,
     serif;
 
   font-size: 16px;
@@ -64,18 +63,23 @@ nav {
 }
 
 nav a {
-  color: #222;
+  color: #4f8298;
   text-decoration: none;
 }
 
-nav a:hover,
+nav a:hover {
+  color: #315f73;
+  text-decoration: underline;
+}
+
 nav a.active {
+  color: #315f73;
   text-decoration: underline;
 }
 
 nav span {
+  color: #8aa7b3;
   margin: 0 4px;
-  color: #666;
 }
 
 
@@ -276,4 +280,268 @@ footer {
     margin-bottom: 16px;
   }
 
+}
+
+/* =========================
+   Top dropdown
+========================= */
+
+.top-menu {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 100;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown summary {
+  list-style: none;
+  cursor: pointer;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ccc;
+  border-radius: 50%;
+
+  background: white;
+
+  font-size: 20px;
+  color: #222;
+
+  transition: background 0.2s ease;
+}
+
+.dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown summary:hover {
+  background: #f3f3f3;
+}
+
+
+/* Dropdown box */
+
+.dropdown-menu {
+  position: absolute;
+  top: 52px;
+  right: 0;
+
+  min-width: 190px;
+
+  padding: 12px 0;
+
+  background: white;
+
+  border: 1px solid #ddd;
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.08);
+
+  text-align: left;
+}
+
+
+/* Links */
+
+.dropdown-menu a,
+.dropdown-menu span {
+  display: block;
+
+  padding: 8px 18px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+
+  text-decoration: none;
+  color: #222;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+
+/* Section titles */
+
+.dropdown-title {
+  padding: 7px 18px 5px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  color: #999;
+}
+
+
+/* Separator */
+
+.dropdown-divider {
+  height: 1px;
+  background: #eee;
+  margin: 8px 0;
+}
+
+
+/* Disabled languages */
+
+.dropdown-menu .disabled {
+  color: #aaa;
+  cursor: default;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .top-menu {
+    top: 20px;
+    right: 20px;
+  }
+
+  .dropdown summary {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+}
+
+/* =========================
+   Profile page
+========================= */
+
+.profile-intro {
+  margin-bottom: 35px;
+}
+
+.profile-entry {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 25px;
+
+  margin-bottom: 32px;
+}
+
+.profile-year {
+  color: #777;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.profile-content strong {
+  font-size: 17px;
+}
+
+.profile-content p {
+  margin: 5px 0 0;
+}
+
+.research-list {
+  padding-left: 20px;
+}
+
+.research-list li {
+  margin-bottom: 8px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .profile-entry {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .profile-year {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+}
+
+/* =========================
+   Publications page
+========================= */
+
+.publication {
+  margin-bottom: 34px;
+}
+
+.publication-title {
+  margin: 0 0 7px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.publication-authors {
+  margin: 0 0 5px;
+
+  font-size: 15px;
+  line-height: 1.55;
+
+  color: #444;
+}
+
+.publication-journal {
+  margin: 0;
+
+  font-size: 15px;
+  color: #666;
+}
+
+
+/* ResearchGate */
+
+.researchgate-link {
+  margin-top: 22px;
+}
+
+.researchgate-link a {
+  font-weight: 600;
+}
+
+.researchgate-section {
+  margin-bottom: 45px;
+}
+
+.researchgate-button {
+  display: inline-block;
+
+  padding: 9px 15px;
+
+  border: 1px solid #aaa;
+
+  color: #222;
+  text-decoration: none;
+
+  font-size: 15px;
+}
+
+.researchgate-button:hover {
+  background: #f5f5f5;
+  text-decoration: none;
 }
